@@ -1,0 +1,18 @@
+﻿@model WebApplication1.Models.Model.Hakkimizda
+@{
+    ViewBag.Title = "Hakkımizda";
+    Layout = "~/Views/Shared/_SiteLayout.cshtml";
+}
+
+<div class="container">
+    <div class="col-md-12">
+        <h4>Float image in paragraph</h4>
+        <img src="~/content/SiteLayout/img/dummies/dummy-1.jpg" alt="" class="align-center" />
+        <p>
+           @Html.Raw(Model.Aciklama)
+        </p>
+    </div>
+</div>
+
+
+

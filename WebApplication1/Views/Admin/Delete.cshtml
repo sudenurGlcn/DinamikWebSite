@@ -1,0 +1,49 @@
+﻿@model WebApplication1.Models.Model.Admin
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Admin Sil</h2>
+
+<h3>Silmek istediğinizden emin misiniz?</h3>
+<div>
+    <h4>Admin</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayFor(model => model.Eposta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Eposta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sifre)
+        </dt>
+
+        <dd>
+            @Html.DisplayNameFor(model => model.Sifre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Yetki)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Yetki)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Kaydet" class="btn btn-default" /> |
+            @Html.ActionLink("Geri Dön", "/Ayarlar")
+        </div>
+    }
+</div>

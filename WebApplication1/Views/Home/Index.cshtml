@@ -1,0 +1,56 @@
+﻿@{
+    Layout = "~/Views/Shared/_SiteLayout.cshtml";
+    ViewBag.Title = "Home Page";
+}
+
+<section id="featured">
+    <!-- start slider -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- Slider -->
+                @{
+                    Html.RenderAction("SliderPartial", "Home");
+                }
+                <!-- end slider -->
+            </div>
+        </div>
+    </div>
+
+
+
+</section>
+@*<section class="callaction">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="big-cta">
+                        <div class="cta-text">
+                            <h2><span>Moderna</span> HTML Business Template</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>*@
+<section id="content">
+    <div class="container">
+     
+        <!-- divider -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="solidline">
+                </div>
+            </div>
+        </div>
+        <!-- end divider -->
+        <!-- Portfolio Projects -->
+        <div class="row">
+            @{
+                Html.RenderAction("UrunlerPartial", "Home");
+            }
+        </div>
+       
+
+    </div>
+</section>
